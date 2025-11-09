@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zihinsel Yetersizliği Anlama Rehberi (Revize)</title>
+    <title>Zihinsel Yetersizliği Anlama Rehberi (Final Revize)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Chosen Palette: Calm Harmony (Background: gray-50, Accent: amber-700) -->
     <!-- Application Structure Plan: Tematik gezinme (Ana Sayfa, Kavramlar, Tanı, Nedenler, Özellikler, Tarama, Tarihçe) eklendi. Kullanıcı geri bildirimlerine göre 'Kavramlar' (AAIDD, DSM-5 vb. açılımları) ve 'Tarama' bölümüne (Doğum anı/sonrası, alt testler) yeni sekmeler eklendi. Yapı, akademik bilgiyi keşfedilebilir bölümlere ayırmayı amaçlar. -->
-    <!-- Visualization & Content Choices: [Prevalans -> Goal: Inform -> Viz: Doughnut Chart (Chart.js) -> Interaction: Hover] | [Sınıflama/Nedenler/Özellikler/Tarihçe/Tarama -> Goal: Organize/Compare -> Viz: Sekmeli İçerik (HTML/JS) -> Interaction: Click tabs -> Justification: Yoğun metin ve alt kategoriler (örn. Prenatal/Yenidoğan, ICD/MEB) yönetilebilir, odaklanmış bölümlere ayrıldı.] | [Tanı Kriterleri -> Goal: Inform -> Viz: HTML List] -->
+    <!-- Visualization & Content Choices: [Prevalans -> Goal: Inform -> Viz: Doughnut Chart (Chart.js) -> Interaction: Hover] | [Sınıflama/Nedenler/Özellikler/Tarihçe/Tarama -> Goal: Organize/Compare -> Viz: Sekmeli İçerik (HTML/JS) -> Interaction: Click tabs -> Justification: Yoğun metin ve alt kategoriler (örn. Prenatal/Yenidoğan, MEB) yönetilebilir, odaklanmış bölümlere ayrıldı.] | [Tanı Kriterleri -> Goal: Inform -> Viz: HTML List] -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
@@ -125,7 +125,7 @@
                         <h2 class="text-xl font-semibold text-amber-700 mb-3">ICD-10 / ICD-11</h2>
                         <p class="text-gray-600 font-medium">International Classification of Diseases</p>
                         <p class="text-gray-600 mt-1">(Hastalıkların Uluslararası Sınıflaması)</p>
-                        <p class="text-gray-700 mt-3">Dünya Sağlık Örgütü (WHO) tarafından yayınlanır ve hastalıkları kodlar. Zihinsel yetersizliği "Zekâ Geriliği" (F70-F79) başlığı altında sınıflandırır.</p>
+                        <p class="text-gray-700 mt-3">Dünya Sağlık Örgütü (WHO) tarafından yayınlanır. Zihinsel yetersizliği "Zekâ Geriliği" (F70-F73) başlığı altında kodlar.</p>
                     </div>
                 </div>
             </section>
@@ -177,7 +177,6 @@
                     <div class="border-b border-gray-200 mb-4">
                         <nav class="-mb-px flex space-x-6" data-tab-group="siniflama-tabs">
                             <button class="tab-toggle py-2 px-1 border-b-2 border-transparent text-gray-600 hover:text-amber-600 tab-active" data-tab-toggle="egitsel">Eğitsel (MEB)</button>
-                            <button class="tab-toggle py-2 px-1 border-b-2 border-transparent text-gray-600 hover:text-amber-600" data-tab-toggle="klinik">Klinik (ICD-10)</button>
                         </nav>
                     </div>
                     <div id="egitsel-content" class="tab-content space-y-3" data-tab-content="egitsel">
@@ -193,25 +192,6 @@
                         <div>
                             <h4 class="font-medium text-gray-800">Ağır / Çok Ağır Düzeyde ZY</h4>
                             <p class="text-gray-600 text-sm"><strong class="text-gray-900">ZB Aralığı:</strong> 35 ve altı (yaklaşık). Yaşam boyu yoğun desteğe ve bakıma gereksinim duyarlar.</p>
-                        </div>
-                    </div>
-                    <div id="klinik-content" class="tab-content hidden space-y-3" data-tab-content="klinik">
-                        <h3 class="font-semibold text-lg mb-2">Klinik Sınıflama (ICD-10 Kodları)</h3>
-                         <div>
-                            <h4 class="font-medium text-gray-800">F70: Hafif Düzeyde Zeka Geriliği</h4>
-                            <p class="text-gray-600 text-sm">ZB puanları ortalama 50-69 arasıdır. Okulda öğrenme sorunları yaşayabilirler.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-800">F71: Orta Düzeyde Zeka Geriliği</h4>
-                            <p class="text-gray-600 text-sm">ZB puanları ortalama 35-49 arasıdır. Gelişimsel gerilik erken çocuklukta gözlemlenebilir.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-800">F72: Ağır Düzeyde Zeka Geriliği</h4>
-                            <p class="text-gray-600 text-sm">ZB puanları ortalama 20-34 arasıdır. Yaşam boyu desteğe ihtiyaç duyarlar.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-800">F73: Çok Ağır Düzeyde Zeka Geriliği</h4>
-                            <p class="text-gray-600 text-sm">ZB puanları ortalama 20'nin altındadır. Sürekli olarak üst düzeyde desteğe ihtiyaç duyarlar.</p>
                         </div>
                     </div>
                 </div>
@@ -247,7 +227,7 @@
                                         </ul>
                                     </li>
                                     <li><strong>Frajil-X Sendromu:</strong> Erkeklerde daha sık görülür, X kromozomundaki FMR1 genindeki bir hatadan kaynaklanır.</li>
-                                    <li><strong>Williams Sendromu:</strong> 7. kromozomdaki elastin geninin kaybından kaynaklanır, kalp sorunları eşlik edebilir.</li>
+                                    <li><strong>Williams Sendromu:</strong> 7. kromozomdaki elastin geninin <strong>kaybından (silinmesinden)</strong> kaynaklanır, kalp sorunları eşlik edebilir.</li>
                                     <li><strong>Prader-Willi Sendromu:</strong> Genellikle babadan gelen 15. kromozomdaki bir hatadan kaynaklanır, doymak bilmeyen yeme isteği tipiktir.</li>
                                     <li><strong>Fenilketonüri (PKU):</strong> Genetik kökenli metabolik bir bozukluktur. Erken teşhis ve **özel diyetle** zihinsel yetersizlik önlenebilir.</li>
                                 </ul>
@@ -255,9 +235,9 @@
                             <div class="bg-gray-50 p-4 rounded-lg border">
                                 <h4 class="font-semibold text-amber-700">2. Anneye ve Çevreye İlişkin Etmenler</h4>
                                 <ul class="list-disc list-inside text-sm text-gray-600 mt-2 space-y-1">
-                                    <li><strong>Enfeksiyonlar:</strong> Annenin gebelikte geçirdiği **Kızamıkçık (Rubella)**, Toksoplazma ve HIV gibi hastalıklar.</li>
+                                    <li><strong>Enfeksiyonlar:</strong> Annenin gebelikte geçirdiği <strong>Kızamıkçık (Rubella)</strong>, <strong>Kızamık (Rubeola)</strong>, <strong>Suçiçeği (Varicella)</strong>, Toksoplazma ve HIV gibi hastalıklar.</li>
                                     <li><strong>Madde Kullanımı:</strong> Annenin alkol, uyuşturucu veya bazı ilaçları kullanması.</li>
-                                    <li><strong>Anne Yaşı:</strong> 20 yaş altı veya 35 yaş üstü gebelikler riski artırır.</li>
+                                    <li><strong>Anne Yaşı:</strong> 20 yaş altı veya 35 yaş üstü gebelikler ve yaşlı dişi/erkek hücrelerinin birleşimi riski artırır.</li>
                                     <li><strong>Rh Uyuşmazlığı:</strong> Annenin Rh(-), bebeğin Rh(+) olması (özellikle ikinci ve sonraki doğumlarda).</li>
                                     <li><strong>Radyasyon:</strong> 0.5 Gray üzerindeki yüksek doza maruz kalma.</li>
                                 </ul>
@@ -278,7 +258,7 @@
                         <p class="text-gray-600">Doğum eylemi sırasında meydana gelen komplikasyonları içerir:</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
                             <li><strong>Doğum Zamanı:</strong> **Erken doğum** (< 37 hafta) ve düşük doğum ağırlığı (< 2500 gr) ciddi bir risk faktörüdür. Geç doğumlar da risklidir.</li>
-                            <li><strong>Güç Doğum ve Oksijensizlik (Hipoksi):</strong> Bebeğin doğum kanalında uzun süre kalması, göbek kordonunun dolanması veya iri olması nedeniyle beynin oksijensiz kalması (Hipoksi).</li>
+                            <li><strong>Güç Doğum ve Oksijensizlik (Asfiksi / Hipoksi):</strong> Bebeğin doğum kanalında uzun süre kalması, göbek kordonunun dolanması veya iri olması nedeniyle beynin oksijensiz kalması.</li>
                             <li><strong>Ekipman Kullanımı:</strong> Vakum veya forseps gibi ekipmanların yanlış kullanımı beyin kanamalarına yol açabilir.</li>
                             <li><strong>Enfeksiyonlar:</strong> Doğum ortamında bebeğin menenjit gibi enfeksiyonlara maruz kalması.</li>
                         </ul>
@@ -289,7 +269,7 @@
                         <h3 class="font-semibold text-lg mb-2">Doğum Sonrası (Postnatal) Nedenler</h3>
                         <p class="text-gray-600">Doğumdan 18 yaşına kadar olan süreçte meydana gelen durumları içerir:</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li><strong>Hastalıklar ve Enfeksiyonlar:</strong> **Menenjit**, ansefalit (beyin iltihabı), kızamık gibi yüksek ateşli hastalıklar.</li>
+                            <li><strong>Hastalıklar ve Enfeksiyonlar:</strong> **Menenjit**, **Meningosefalit**, ansefalit (beyin iltihabı), kızamık gibi yüksek ateşli hastalıklar.</li>
                             <li><strong>Zehirlenmeler:</strong> Özellikle **Kurşun zehirlenmesi** (2. yaş döneminde çok tehlikelidir), kimyasal maddeler veya ilaçlar.</li>
                             <li><strong>Kazalar:</strong> Düşme, trafik kazaları gibi baş travmaları (beyin hasarı).</li>
                             <li>**Çevresel ve Sosyal Etmenler:** Yetersiz beslenme, çevresel uyaran eksikliği ve çocuk istismarı/ihmali.</li>
@@ -372,16 +352,19 @@
                                     <li>İkili, Üçlü ve Dörtlü Tarama Testleri (Down Sendromu riskini belirler)</li>
                                     <li>Fetal Ultrasonografik Değerlendirme</li>
                                     <li>Anne Kanında Fetal Hücre Analizi</li>
+                                    <li>Fetal Ekokardiyografi</li>
+                                    <li>Magnetik Rezonans Görüntüleme (MRG)</li>
                                 </ul>
                             </div>
                             <div class="bg-gray-50 p-4 rounded-lg border">
                                 <h4 class="font-semibold text-amber-700">2. İnvaziv (Kesin Tanı) Testler</h4>
                                 <p class="text-sm text-gray-600 mb-2">Fetüse doğrudan müdahale içerir ve kromozomal analize olanak tanır.</p>
                                 <ul class="list-disc list-inside text-sm text-gray-600 mt-2 space-y-1">
-                                    <li>Amniyosentez (Amniyon sıvısı alma)</li>
+                                    <li>Amniyosentez (Amniyon sıvısı alma, örn: Tay Sachs tespiti)</li>
                                     <li>Koryon Villus Doku Örneklemesi (CVS)</li>
                                     <li>Kordosentez (Göbek kordonundan kan alma)</li>
-                                    <li>Fetoskopi</li>
+                                    <li>Fetoskopi / Embriyoskopi</li>
+                                    <li>Organ Biyopsileri</li>
                                 </ul>
                             </div>
                         </div>
@@ -395,22 +378,34 @@
                             <li><strong>APGAR Puanı:</strong> Doğumun 1. ve 5. dakikalarında bebeğin kas tonusu, nabız, refleks, cilt rengi ve solunumuna bakılır.</li>
                             <li><strong>Ulusal Metabolik Tarama (PKU):</strong> Diyetle önlenebilen Fenilketonüri için topuktan kan örneği alınır.</li>
                             <li><strong>Ulusal İşitme Taraması:</strong> Yenidoğan işitme sorunlarını erken tespit için kullanılır.</li>
-                            <li><strong>Diğer Kan/İdrar Testleri:</strong> Galaktosemi (idrar) veya sarılık (kan biyokimyası) gibi durumlar için kullanılır.</li>
+                            <li><strong>Diğer Kan/İdrar Testleri:</strong> Galaktosemi (idrar), Kretenizm, Raşitizm, Sarılık (kan biyokimyası).</li>
+                            <li><strong>Nörolojik Değerlendirmeler:</strong> EEG (nöbet bozukluğu), BERA (işitme), MRG (SP için).</li>
                         </ul>
                     </div>
 
                     <!-- Doğum Sonrası Tarama -->
                     <div id="postnatal-tarama-content" class="tab-content hidden space-y-4" data-tab-content="postnatal-tarama">
-                        <h3 class="font-semibold text-lg mb-2">Doğum Sonrası (Postnatal) Gelişimsel Tarama</h3>
-                        <p class="text-gray-600">Bebeklik ve erken çocukluk döneminde gelişimsel gecikme riskini belirlemek için kullanılır:</p>
-                        <h4 class="font-medium text-amber-700 mt-3">Gelişimsel Tarama Araçları (Örnekler):</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Denver Gelişimsel Tarama Testi II (DDST-II)</li>
-                            <li>Ankara Gelişimsel Tarama Envanteri (AGTE)</li>
-                            <li>Gazi Erken Çocukluk Gelişimi Değerlendirme Aracı (GEÇDA)</li>
-                            <li>Erken Gelişim Evreleri Envanteri (EGE)</li>
-                        </ul>
-                         <p class="text-sm text-gray-500 mt-4">NOT: Bu araçlar kesin tanı koymaz. Risk belirlediğinde, çocuk detaylı tanılama (Zeka Testleri + Uyumsal Davranış Ölçekleri) için yönlendirilir.</p>
+                        <h3 class="font-semibold text-lg mb-2">Doğum Sonrası (Postnatal) Gelişimsel Tarama ve Tanılama</h3>
+                        <p class="text-gray-600">Bebeklik ve erken çocukluk döneminde gelişimsel gecikme riskini belirlemek (tarama) ve tanı koymak (tanılama) için kullanılır:</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-4 rounded-lg border">
+                                <h4 class="font-semibold text-amber-700">1. Gelişimsel Tarama Araçları (Risk Belirleme)</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-600 mt-2 space-y-1">
+                                    <li>Denver Gelişimsel Tarama Testi II (DDST-II)</li>
+                                    <li>Ankara Gelişimsel Tarama Envanteri (AGTE)</li>
+                                    <li>Gazi Erken Çocukluk Gelişimi Değerlendirme Aracı (GEÇDA)</li>
+                                    <li>Erken Gelişim Evreleri Envanteri (EGE)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg border">
+                                <h4 class="font-semibold text-amber-700">2. Tanılama Araçları (Kesin Teşhis)</h4>
+                                <p class="text-sm text-gray-600 mb-2">Risk belirlendiğinde, ZY tanısı için bu iki alan değerlendirilir:</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600 mt-2 space-y-1">
+                                    <li><strong>Zeka Testleri:</strong> WISC-R, Stanford-Binet, CAS, Kaufman (K-ABC), Leiter.</li>
+                                    <li><strong>Uyumsal Davranış Ölçekleri:</strong> Vineland Uyum Davranış Ölçeği, AAMR Uyumsal Davranış Ölçeği (ABS), ABAS-II.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -434,15 +429,17 @@
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
                             <li><strong>Antik Çağ (Yunan/Roma):</strong> Engelli bireylere yönelik algı dışlayıcıydı. Aristoteles ve Platon, toplumsal görevi yerine getiremeyeceklerin yok edilmesi gerektiğini savunmuştur.</li>
                             <li><strong>Orta Çağ:</strong> Engellilik, şeytani bir durum veya ilahi bir ceza olarak algılandı.</li>
+                            <li><strong>1530 (Paracelsus):</strong> Zihin yetersizliği üzerine ilk tıbbi bilimsel kitabı yazdı.</li>
                             <li><strong>19. Yüzyıl (Eğitimin Başlangıcı):</strong>
                                 <ul class="list-circle list-inside ml-4">
-                                    <li><strong>Jean Marc Gaspard Itard:</strong> Aveyron ormanlarında bulunan 'vahşi çocuk' Victor ile yaptığı çalışmalarla özel eğitimin öncüsü oldu.</li>
-                                    <li><strong>Edoard Seguin:</strong> Itard'ın öğrencisi; 'Fizyolojik Yöntem' ile duyu eğitimine odaklanarak 1837'de Paris'te **ilk özel eğitim okulunu açtı**.</li>
+                                    <li><strong>Jean Marc Gaspard Itard (1800):</strong> Aveyron ormanlarında bulunan 'vahşi çocuk' Victor ile yaptığı çalışmalarla özel eğitimin öncüsü oldu.</li>
+                                    <li><strong>Edoard Seguin (1837):</strong> Itard'ın öğrencisi; 'Fizyolojik Yöntem' ile duyu eğitimine odaklanarak Paris'te **ilk özel eğitim okulunu açtı**.</li>
                                 </ul>
                             </li>
                             <li><strong>20. Yüzyıl (Bilimsel Dönem):</strong>
                                 <ul class="list-circle list-inside ml-4">
                                     <li><strong>Binet ve Simon (1905):</strong> İlk zeka ölçeğini geliştirerek 'hafif düzeyde' yetersizliğin tanımlanmasını sağladılar.</li>
+                                    <li><strong>Maria Montessori:</strong> Yapılandırılmış eğitim materyallerini ilk defa zihinsel engelli çocukların eğitimi için geliştirdi.</li>
                                     <li><strong>AAIDD (1959 Tanımı):</strong> Zihin yetersizliği tanımına ilk kez **"uyumsal davranışlara"** vurgu yaptı.</li>
                                     <li><strong>PL 94-142 (1975, ABD):</strong> "Tüm Engelli Çocuklar İçin Eğitim Yasası" ile uygun ve ücretsiz eğitimi garanti altına aldı ve **kaynaştırma** uygulamalarını başlattı.</li>
                                 </ul>
@@ -454,16 +451,26 @@
                         <h3 class="font-semibold text-lg mb-2">Türkiye Tarihçesi (Önemli Dönüm Noktaları)</h3>
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
                             <li><strong>Osmanlı Dönemi:</strong> Özel eğitimdeki ilk sistemli çaba, **Enderun Mektebi** ile üstün yetenekli bireylere yönelikti. (1889'da işitme ve görme engelliler için sınıflar açıldı).</li>
+                            <li><strong>1921 (İzmir):</strong> "Özel İzmir Sağırlar ve Körler Müessesi" açıldı.</li>
                             <li><strong>1950'ler (Cumhuriyet Dönemi Dönüşümü):</strong>
                                 <ul class="list-circle list-inside ml-4">
-                                    <li>Özel eğitim hizmetleri Sağlık Bakanlığı'ndan **Milli Eğitim Bakanlığı'na** devredildi. Bu, konunun bir **eğitim konusu** olarak ele alındığını gösteren kritik bir adımdı.</li>
+                                    <li>Hizmetler Sağlık Bakanlığı'ndan **Milli Eğitim Bakanlığı'na** devredildi (Konu artık 'sağlık' değil, 'eğitim' olarak görüldü).</li>
                                     <li><strong>1952 (Gazi Eğitim Enstitüsü):</strong> Özel Eğitim Şubesi kurularak personel yetiştirmede **ilk sistemli çaba** başladı.</li>
                                     <li><strong>1955 (Psikolojik Servis Merkezi):** Günümüzdeki Rehberlik ve Araştırma Merkezleri'nin (RAM) temelini attı.</li>
+                                    <li><strong>1955 (Test ve Araştırma Bürosu):</strong> ÖSYM'nin temelini oluşturan yapı kuruldu.</li>
                                 </ul>
                             </li>
-                            <li><strong>1965 (Ankara Üniversitesi):** Özel Eğitim Bölümü kurularak üniversite düzeyindeki **ikinci önemli başlangıç** yapıldı.</li>
-                            <li><strong>1997 (573 Sayılı KHK):** Özel eğitim gerektiren bireylerin eğitim haklarını düzenleyen ilk kapsamlı yasal düzenlemelerden biri oldu.</li>
-                            <li><strong>2006 (Özel Eğitim Hizmetleri Yönetmeliği):** Bireyselleştirilmiş Eğitim Programı (BEP) gibi modern uygulamaları ve güncel tanı kriterlerini yasal çerçeveye oturttu.</li>
+                            <li><strong>1960'lar - 1970'ler (Yasal Gelişmeler):</strong>
+                                <ul class="list-circle list-inside ml-4">
+                                    <li><strong>1961 Anayasası (Madde 50):</strong> "Devlet durumları sebebiyle özel eğitime ihtiyacı olanları topluma yararlı kılacak tedbirleri alır." hükmü eklendi.</li>
+                                    <li><strong>1965 (Ankara Üniversitesi):</strong> Özel Eğitim Bölümü kurularak üniversite düzeyindeki **ikinci önemli başlangıç** yapıldı.</li>
+                                    <li><strong>1971 (1475 sayılı İş Kanunu):</strong> İşyerlerine %3 oranında engelli birey çalıştırma hükmü getirildi.</li>
+                                </ul>
+                            </li>
+                            <li><strong>1983 (2916 Sayılı Kanun):</strong> "Özel Eğitime Muhtaç Çocuklar Kanunu" çıkarıldı (İlk kapsamlı yasa).</li>
+                            <li><strong>1997 (Yasal Çerçeve):</strong> <strong>571 Sayılı KHK</strong> (Özürlüler İdaresi Başkanlığı) ve <strong>573 Sayılı KHK</strong> (Özel Eğitim Hakkında) ile yasal çerçeve güçlendirildi.</li>
+                            <li><strong>2006 (Özel Eğitim Hizmetleri Yönetmeliği):</strong> BEP gibi modern uygulamaları ve güncel tanı kriterlerini yasal çerçeveye oturttu.</li>
+                            <li><strong>2013 (6462 sayılı Kanun):</strong> "Özürlü", "sakat" gibi ibareler "engelli" olarak değiştirildi.</li>
                         </ul>
                     </div>
                 </div>
@@ -541,7 +548,7 @@
                 
                 tabGroups.forEach(group => {
                     const toggles = group.querySelectorAll('[data-tab-toggle]');
-                    const contents = group.closest('.rounded-lg').querySelectorAll('[data-tab-content]');
+                    const contents = group.closest('.rounded-lg, .content-section').querySelectorAll('[data-tab-content]');
 
                     toggles.forEach(toggle => {
                         toggle.addEventListener('click', (e) => {
